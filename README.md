@@ -14,17 +14,6 @@ TypeScript Web Viewer
 The app captures live camera frames, sends them to native C++ code, performs Canny Edge Detection, and displays the output using OpenGL ES.
 A companion web viewer displays a sample processed frame using TypeScript.
 
-📸 Demo Preview
-
-Add screenshots or GIFs here
-Example:
-
-screenshots/app_raw.jpg
-
-screenshots/app_edges.jpg
-
-screenshots/web_viewer.png
-
 🧩 Features Implemented
 ✅ Android Application
 ✔ Real-Time Camera Feed
