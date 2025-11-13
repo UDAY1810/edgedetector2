@@ -1,6 +1,4 @@
-# 🧠 Real Time Edge Detection  
-
-### **Software Engineering Intern (R&D) — Adobe**
+# 🧠 Real Time Edge Detection 
 
 A real-time hybrid **Android + Native (C++ + OpenCV + OpenGL)** application for GPU-accelerated edge detection, with a companion **TypeScript Web Viewer** demo.
 
