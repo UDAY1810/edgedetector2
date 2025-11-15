@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "serve": "http-server ./ -p 5500 -c-1",
+    "serve": "http-server ./ -p 8081 -c-1",
     "dev": "npm run build && npm run serve",
     "clean": "rmdir /s /q dist 2>nul || rm -rf dist"
   },

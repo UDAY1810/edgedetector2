@@ -29,7 +29,7 @@ class MainActivity : Activity() {
     private lateinit var renderer: GLTextureRenderer
     private lateinit var toggleBtn: Button
     private lateinit var fpsText: TextView
-    private lateinit var server: SimpleWebSocketServer
+
 
     private var showEdge = 1
     private var cameraSurface: Surface? = null

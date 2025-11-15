@@ -122,7 +122,7 @@ npm run build
 npm run serve
 ```
 
-Then open: **http://localhost:8080**
+Then open: **http://localhost:8081**
 
 ### Development Mode
 ```bash
@@ -134,7 +134,7 @@ npm run serve    # Terminal 2 - Dev server
 
 ## 📱 Demo Mode Instructions
 
-1. **Open the web page** at http://localhost:8080
+1. **Open the web page** at http://localhost:80801
 2. **Select a mode**: Click Raw Feed, Edge Detection, or Grayscale
 3. **Click Play Demo**: Starts automatic frame cycling
 4. **Adjust FPS**: Use slider to change speed (1-30 FPS)
@@ -214,27 +214,7 @@ This project demonstrates:
 
 ---
 
-## 🎯 Assessment Requirements Met
 
-### ✅ Must-Have Features
-- [x] TypeScript implementation
-- [x] Canvas-based rendering
-- [x] Frame display (static/demo)
-- [x] Statistics display (FPS, resolution)
-- [x] Processing modes (Raw, Edge, Gray)
-- [x] Clean modular code
-- [x] Proper documentation
-
-### ✅ Bonus Features
-- [x] WebSocket client (ready for Android)
-- [x] Demo playback system
-- [x] FPS counter
-- [x] Toggle controls
-- [x] Responsive design
-- [x] Modern UI/UX
-- [x] Architecture visualization
-
----
 
 ## 🏆 Final Checklist
 
@@ -265,7 +245,7 @@ The **complete web version** of the OpenCV viewer has been successfully built wi
 - **Professional documentation**
 
 ### Next Steps for You:
-1. ✅ Open http://localhost:8080 in browser
+1. ✅ Open http://localhost:8081 in browser
 2. ✅ Test all features (modes, play, pause, reset)
 3. ✅ Review the code structure
 4. ✅ Take screenshots for submission

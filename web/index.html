@@ -1,167 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Real-time edge detection viewer for Android OpenCV processing">
-    <title>OpenCV Edge Detection Viewer</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Real-time edge detection viewer for Android OpenCV processing" />
+    <title>OpenCV Viewer Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div class="container">
 
-        <!-- Header -->
-        <header class="header">
-            <h1>🎨 OpenCV Real-Time Viewer</h1>
-            <p class="subtitle">Edge Detection & Image Processing Dashboard</p>
-        </header>
+<div class="container">
 
-        <!-- Main Content -->
-        <main class="main-content">
+    <!-- Top Section -->
+    <header class="header">
+        <h1>🎥 OpenCV Web Viewer</h1>
+        <p class="subtitle">Live Processing • Edge Detection • JNI + OpenCV C++</p>
+    </header>
 
-            <!-- Frame Display Area -->
-            <section class="frame-display">
-                <div class="frame-container">
-                    <canvas id="frameCanvas" width="640" height="480"></canvas>
-                    <div class="frame-overlay">
-                        <span id="frameLabel" class="frame-label">Raw Feed</span>
-                    </div>
-                </div>
-            </section>
 
-            <!-- Stats Panel -->
-            <aside class="stats-panel">
-                <h2>📊 Statistics</h2>
+    <!-- Canvas + Stats Combined -->
+    <section class="visual-panel">
 
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-label">FPS</span>
-                        <span id="fps" class="stat-value">0</span>
-                    </div>
+        <!-- Live Canvas -->
+        <div class="canvas-box">
+            <canvas id="frameCanvas" width="640" height="480"></canvas>
 
-                    <div class="stat-item">
-                        <span class="stat-label">Resolution</span>
-                        <span id="resolution" class="stat-value">640x480</span>
-                    </div>
+            <span id="frameLabel" class="canvas-label">Raw Feed</span>
+        </div>
 
-                    <div class="stat-item">
-                        <span class="stat-label">Processing Time</span>
-                        <span id="processingTime" class="stat-value">0 ms</span>
-                    </div>
+        <!-- Stats -->
+        <div class="stats-box">
+            <h2>📊 Live Statistics</h2>
 
-                    <div class="stat-item">
-                        <span class="stat-label">Frame Count</span>
-                        <span id="frameCount" class="stat-value">0</span>
-                    </div>
-
-                    <div class="stat-item">
-                        <span class="stat-label">Status</span>
-                        <span id="status" class="stat-value status-idle">Idle</span>
-                    </div>
-
-                    <div class="stat-item">
-                        <span class="stat-label">Connection</span>
-                        <span id="connection" class="stat-value status-disconnected">Disconnected</span>
-                    </div>
+            <div class="stats-row">
+                <div class="stat">
+                    <span>FPS</span>
+                    <strong id="fps">0</strong>
                 </div>
 
-                <!-- Connection Info -->
-                <div class="connection-info">
-                    <h3>🔌 WebSocket</h3>
-                    <input type="text" id="wsUrl" placeholder="ws://192.0.0.4.5500" value="ws://192.0.0.4.5500">
-                    <button id="connectBtn" class="btn btn-primary">Connect</button>
-                </div>
-            </aside>
-        </main>
-
-        <!-- Controls -->
-        <section class="controls-panel">
-            <h2>🎮 Controls</h2>
-
-            <div class="controls-grid">
-
-                <!-- Mode Buttons -->
-                <div class="control-group">
-                    <label>Processing Mode</label>
-                    <div class="button-group">
-                        <button id="rawBtn" class="btn btn-mode active" data-mode="raw">📷 Raw Feed</button>
-                        <button id="edgeBtn" class="btn btn-mode" data-mode="edge">🔲 Edge Detection</button>
-                        <button id="grayBtn" class="btn btn-mode" data-mode="gray">⬜ Grayscale</button>
-                    </div>
+                <div class="stat">
+                    <span>Resolution</span>
+                    <strong id="resolution">640x480</strong>
                 </div>
 
-                <!-- Playback Controls -->
-                <div class="control-group">
-                    <label>Playback</label>
-                    <div class="button-group">
-                        <button id="playBtn" class="btn btn-success">▶️ Play Demo</button>
-                        <button id="pauseBtn" class="btn btn-warning" disabled>⏸️ Pause</button>
-                        <button id="resetBtn" class="btn btn-danger">🔄 Reset</button>
-                    </div>
+                <div class="stat">
+                    <span>Processing</span>
+                    <strong id="processingTime">0 ms</strong>
                 </div>
 
-                <!-- FPS Slider -->
-                <div class="control-group">
-                    <label>Demo Settings</label>
-                    <div class="slider-group">
-                        <label for="fpsSlider">Target FPS: <span id="fpsValue">15</span></label>
-                        <input type="range" id="fpsSlider" min="1" max="30" value="15">
-                    </div>
+                <div class="stat">
+                    <span>Frame Count</span>
+                    <strong id="frameCount">0</strong>
                 </div>
 
-            </div>
-        </section>
-
-        <!-- Architecture Flow -->
-        <section class="info-panel">
-            <h2>📐 Architecture Flow</h2>
-
-            <div class="architecture-flow">
-                <div class="flow-step">
-                    <span class="flow-icon">📸</span>
-                    <span class="flow-text">Camera Capture</span>
+                <div class="stat">
+                    <span>Status</span>
+                    <strong id="status" class="status-idle">Idle</strong>
                 </div>
 
-                <span class="flow-arrow">→</span>
-
-                <div class="flow-step">
-                    <span class="flow-icon">🔗</span>
-                    <span class="flow-text">JNI Bridge</span>
-                </div>
-
-                <span class="flow-arrow">→</span>
-
-                <div class="flow-step">
-                    <span class="flow-icon">⚙️</span>
-                    <span class="flow-text">OpenCV C++</span>
-                </div>
-
-                <span class="flow-arrow">→</span>
-
-                <div class="flow-step">
-                    <span class="flow-icon">🎨</span>
-                    <span class="flow-text">OpenGL ES</span>
-                </div>
-
-                <span class="flow-arrow">→</span>
-
-                <div class="flow-step active">
-                    <span class="flow-icon">🌐</span>
-                    <span class="flow-text">Web Viewer</span>
+                <div class="stat">
+                    <span>WS</span>
+                    <strong id="connection" class="status-disconnected">Disconnected</strong>
                 </div>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Built with TypeScript + OpenCV + OpenGL ES | RnD Intern Assessment</p>
-            <p class="tech-stack">Tech Stack: Android NDK • JNI • OpenCV C++ • OpenGL ES 2.0 • TypeScript</p>
-        </footer>
+            <!-- WebSocket Box -->
+            <div class="ws-box">
+                <h3>🔌 WebSocket</h3>
+                <input type="text" id="wsUrl" value="ws://192.168.185.57:8081" />
+                <button id="connectBtn" class="btn btn-primary">Connect</button>
+            </div>
+        </div>
 
-    </div>
+    </section>
 
-    <!-- Load compiled TypeScript -->
-    <script type="module" src="dist/app.js"></script>
+
+
+    <!-- Controls Section -->
+    <section class="control-panel">
+        <h2>🎛 Processing Controls</h2>
+
+        <div class="control-row">
+
+            <!-- Mode Controls -->
+            <div class="control-card">
+                <label>Processing Mode</label>
+                <div class="btn-row">
+                    <button id="rawBtn" data-mode="raw" class="btn btn-mode active">Raw</button>
+                    <button id="edgeBtn" data-mode="edge" class="btn btn-mode">Edge</button>
+                    <button id="grayBtn" data-mode="gray" class="btn btn-mode">Gray</button>
+                </div>
+            </div>
+
+            <!-- Playback Controls -->
+            <div class="control-card">
+                <label>Playback</label>
+                <div class="btn-row">
+                    <button id="playBtn" class="btn btn-success">Play</button>
+                    <button id="pauseBtn" class="btn btn-warning" disabled>Pause</button>
+                    <button id="resetBtn" class="btn btn-danger">Reset</button>
+                </div>
+            </div>
+
+            <!-- FPS Slider -->
+            <div class="control-card">
+                <label>Demo Settings</label>
+                <p>FPS: <span id="fpsValue">15</span></p>
+                <input type="range" id="fpsSlider" min="1" max="30" value="15" />
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Architecture Section -->
+    <section class="architecture-panel">
+        <h2>🧩 Data Flow Overview</h2>
+
+        <div class="flow-diagram">
+
+            <div class="flow-item">
+                <span class="flow-icon">📸</span>
+                <span>Camera</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-item">
+                <span class="flow-icon">🔗</span>
+                <span>JNI Bridge</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-item">
+                <span class="flow-icon">⚙️</span>
+                <span>OpenCV C++</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-item">
+                <span class="flow-icon">🎨</span>
+                <span>OpenGL ES</span>
+            </div>
+
+            <span class="flow-arrow">→</span>
+
+            <div class="flow-item active">
+                <span class="flow-icon">🌐</span>
+                <span>Web Viewer</span>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>TypeScript • Android NDK • OpenCV • OpenGL ES</p>
+        <p class="tech-stack">R&D Intern Assessment – Real-Time Streaming</p>
+    </footer>
+
+</div>
+
+
+<script type="module" src="dist/app.js"></script>
 </body>
 </html>

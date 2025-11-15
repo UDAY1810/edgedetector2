@@ -1,6 +1,4 @@
 # ninja log v5
-4	3029	1763103623091428149	CMakeFiles/edge_native.dir/ImageProcessor.cpp.o	566a2ba99fd4426c
-2	3048	1763103623113699692	CMakeFiles/edge_native.dir/native-lib.cpp.o	83444cb7f23fe82b
-3048	3684	1763103623735568059	/Users/udaydubey/Desktop/edgedetector2/app/build/intermediates/cxx/Debug/48t6e5c2/obj/arm64-v8a/libedge_native.so	62a1d45d3c7e180
-4	1762	1763223013804893061	CMakeFiles/edge_native.dir/native-lib.cpp.o	83444cb7f23fe82b
-1762	2453	1763223014440089861	/Users/udaydubey/Desktop/edgedetector2/app/build/intermediates/cxx/Debug/48t6e5c2/obj/arm64-v8a/libedge_native.so	62a1d45d3c7e180
+1	2679	1763230640758824295	CMakeFiles/edge_native.dir/ImageProcessor.cpp.o	566a2ba99fd4426c
+1	2824	1763230640903898389	CMakeFiles/edge_native.dir/native-lib.cpp.o	83444cb7f23fe82b
+2824	3409	1763230641477742741	/Users/udaydubey/Desktop/edgedetector2/app/build/intermediates/cxx/Debug/48t6e5c2/obj/arm64-v8a/libedge_native.so	62a1d45d3c7e180
