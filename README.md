@@ -85,8 +85,8 @@ Real-Time Output on Device
 ---
 
 ## 📁 Repository Structure
-
-Edge-detection/
+```
+edgedetector2/
 ├── app/ # Android module (Kotlin)
 │ ├── src/main/
 │ │ ├── AndroidManifest.xml
@@ -129,7 +129,7 @@ Edge-detection/
 │
 ├── README.md
 ├── .gitignore
-
+```
 ---
 
 ## 📦 Setup & Installation
