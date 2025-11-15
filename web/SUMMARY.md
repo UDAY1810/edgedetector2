@@ -134,7 +134,7 @@ npm run serve    # Terminal 2 - Dev server
 
 ## 📱 Demo Mode Instructions
 
-1. **Open the web page** at http://localhost:80801
+1. **Open the web page** at http://localhost:8081
 2. **Select a mode**: Click Raw Feed, Edge Detection, or Grayscale
 3. **Click Play Demo**: Starts automatic frame cycling
 4. **Adjust FPS**: Use slider to change speed (1-30 FPS)

@@ -110,7 +110,7 @@ app.ts (Main Entry Point)
 
 5. **Open in browser**:
    ```
-   http://localhost:8080
+   http://localhost:8081
    ```
 
 ### Alternative: Development Mode
@@ -298,11 +298,7 @@ This is an assessment project. For production use:
 4. Push to branch
 5. Create Pull Request
 
----
 
-## 📄 License
-
-MIT License - Free to use for educational and commercial purposes
 
 ---
 
@@ -315,16 +311,5 @@ MIT License - Free to use for educational and commercial purposes
 
 ---
 
-## 📞 Support
-
-For issues or questions:
-- Check browser console for errors
-- Verify all dependencies are installed
-- Review TypeScript compilation output
-- Ensure server is running on correct port
-
----
-
-**Built with ❤️ for the RnD Intern Assessment**
 
 *Camera → JNI → C++ → OpenGL → Web*
