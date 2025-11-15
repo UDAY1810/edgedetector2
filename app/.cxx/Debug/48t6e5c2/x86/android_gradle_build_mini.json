@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/udaydubey/Desktop/edgedetector2/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/udaydubey/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/udaydubey/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "edge_native::@6890427a1f51a3e7e1df": {
+      "artifactName": "edge_native",
+      "abi": "x86",
+      "output": "/Users/udaydubey/Desktop/edgedetector2/app/build/intermediates/cxx/Debug/48t6e5c2/obj/x86/libedge_native.so",
+      "runtimeFiles": []
+    }
+  }
+}

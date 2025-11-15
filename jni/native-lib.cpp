@@ -56,3 +56,89 @@ delete gProcessor;
 gProcessor = nullptr;
 }
 }
+
+//
+//#include <jni.h>
+//#include <string>
+//#include <opencv2/opencv.hpp>
+//#include "ImageProcessor.h"
+//#include <android/log.h>
+//
+//#define LOG_TAG "edge_native"
+//#define LOGI(...) __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
+//#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR,LOG_TAG,__VA_ARGS__)
+//
+//static ImageProcessor *gProcessor = nullptr;
+//static cv::Mat lastProcessedFrame;   // ⭐ store the latest processed frame for Web Viewer
+//
+//extern "C"
+//JNIEXPORT void JNICALL
+//Java_com_example_edgeviewer_MainActivity_nativeInit(JNIEnv *env, jobject thiz, jint width, jint height) {
+//    if (gProcessor == nullptr) {
+//        gProcessor = new ImageProcessor(width, height);
+//        LOGI("nativeInit: %d x %d", width, height);
+//    }
+//}
+//
+//extern "C"
+//JNIEXPORT jint JNICALL
+//Java_com_example_edgeviewer_MainActivity_nativeProcessFrame(
+//        JNIEnv *env, jobject thiz,
+//        jbyteArray data, jint width, jint height,
+//        jlong timestampNs, jint toggleEdge) {
+//
+//    jbyte *bytes = env->GetByteArrayElements(data, nullptr);
+//
+//    // Y plane only → grayscale
+//    cv::Mat yMat(height, width, CV_8UC1, (unsigned char*)bytes);
+//    cv::Mat rgba;
+//    cv::cvtColor(yMat, rgba, cv::COLOR_YUV2RGBA_NV21);
+//
+//    cv::Mat out;
+//
+//    if (toggleEdge == 1) {
+//        cv::Mat gray;
+//        cv::cvtColor(rgba, gray, cv::COLOR_RGBA2GRAY);
+//        cv::Canny(gray, out, 50, 150);
+//        cv::cvtColor(out, out, cv::COLOR_GRAY2RGBA);
+//    } else {
+//        out = rgba;
+//    }
+//
+//    // ⭐ Save for Web Viewer
+//    lastProcessedFrame = out.clone();
+//
+//    // Upload to GPU texture for Android rendering
+//    int texId = gProcessor->uploadToTexture(out);
+//
+//    env->ReleaseByteArrayElements(data, bytes, JNI_ABORT);
+//    return texId;
+//}
+//
+//extern "C"
+//JNIEXPORT jbyteArray JNICALL
+//Java_com_example_edgeviewer_MainActivity_nativeGetJpegFrame(JNIEnv *env, jobject thiz) {
+//    if (lastProcessedFrame.empty()) {
+//        LOGE("nativeGetJpegFrame: no frame available");
+//        return nullptr;
+//    }
+//
+//    std::vector<uchar> buffer;
+//    cv::imencode(".jpg", lastProcessedFrame, buffer, {cv::IMWRITE_JPEG_QUALITY, 80});
+//
+//    jbyteArray arr = env->NewByteArray(buffer.size());
+//    env->SetByteArrayRegion(arr, 0, buffer.size(), reinterpret_cast<jbyte*>(buffer.data()));
+//
+//    return arr;
+//}
+//
+//extern "C"
+//JNIEXPORT void JNICALL
+//Java_com_example_edgeviewer_MainActivity_nativeRelease(JNIEnv *env, jobject thiz) {
+//    if (gProcessor) {
+//        delete gProcessor;
+//        gProcessor = nullptr;
+//    }
+//    lastProcessedFrame.release();
+//}
+

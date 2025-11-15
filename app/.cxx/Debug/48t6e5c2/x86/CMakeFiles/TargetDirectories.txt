@@ -1,0 +1,3 @@
+/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86/CMakeFiles/edge_native.dir
+/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86/CMakeFiles/edit_cache.dir
+/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86/CMakeFiles/rebuild_cache.dir

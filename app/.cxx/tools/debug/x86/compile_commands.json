@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86",
+  "command": "/Users/udaydubey/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/Users/udaydubey/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dedge_native_EXPORTS -isystem /Users/udaydubey/Desktop/edgedetector2/opencv/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/edge_native.dir/native-lib.cpp.o -c /Users/udaydubey/Desktop/edgedetector2/jni/native-lib.cpp",
+  "file": "/Users/udaydubey/Desktop/edgedetector2/jni/native-lib.cpp"
+},
+{
+  "directory": "/Users/udaydubey/Desktop/edgedetector2/app/.cxx/Debug/48t6e5c2/x86",
+  "command": "/Users/udaydubey/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android24 --sysroot=/Users/udaydubey/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dedge_native_EXPORTS -isystem /Users/udaydubey/Desktop/edgedetector2/opencv/sdk/native/jni/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles/edge_native.dir/ImageProcessor.cpp.o -c /Users/udaydubey/Desktop/edgedetector2/jni/ImageProcessor.cpp",
+  "file": "/Users/udaydubey/Desktop/edgedetector2/jni/ImageProcessor.cpp"
+}
+]

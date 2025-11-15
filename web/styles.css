@@ -1,0 +1,152 @@
+/* ============================
+   RESET & BASE
+=============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ============================
+   HEADER
+=============================== */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ============================
+   FRAME
+=============================== */
+.frame-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#frameCanvas {
+    width: 100%;
+    max-width: 640px;
+    background: #000;
+    border-radius: 6px;
+}
+
+/* ============================
+   STATS
+=============================== */
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    background: #161b22;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.label {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.value {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ============================
+   CONTROLS
+=============================== */
+.controls-section {
+    background: #161b22;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.controls-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 8px 14px;
+    background: #2d333b;
+    border: none;
+    color: #e6edf3;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444c56;
+}
+
+button.active {
+    background: #238636;
+}
+
+/* ============================
+   WEBSOCKET
+=============================== */
+.ws-section {
+    background: #161b22;
+    padding: 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.ws-section input {
+    width: 70%;
+    padding: 8px;
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    color: #e6edf3;
+}
+
+.connect-btn {
+    padding: 8px 14px;
+    background: #238636;
+    border-radius: 6px;
+    margin-left: 10px;
+}
+
+/* ============================
+   FOOTER
+=============================== */
+.footer {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 13px;
+}
