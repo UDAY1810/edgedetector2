@@ -144,11 +144,12 @@ cd edgedetector2
 2️⃣ Install OpenCV Android SDK
 
 Download OpenCV-android-sdk.zip → extract → place here:
-Edge-detection/opencv/
+edegedetector/opencv/
 └── sdk/native/
     ├── jni/
     ├── libs/
     └── include/
+
 3️⃣ Enable NDK Tools
 
 In Android Studio:
